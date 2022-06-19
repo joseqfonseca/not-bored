@@ -9,7 +9,7 @@ Desenvolvido com base no projeto respeitando as exigências da atividadde e pens
 
 Para acessar é preciso pedir autorização.
 
-[Link do protótipo](https://www.figma.com/file/OygDsyMFaOzVfvCXBc3N7h/NOTBORED?node-id=0%3A1)
+[Link do protótipo](https://www.figma.com/proto/OygDsyMFaOzVfvCXBc3N7h/NOTBORED?node-id=37%3A17192&scaling=scale-down&page-id=37%3A16609&starting-point-node-id=37%3A17192)
 
 ---
 
