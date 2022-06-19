@@ -1,13 +1,13 @@
 package com.projkts.notbored.model
 
-enum class Category() {
-    EDUCATION,
-    RECREATIONAL,
-    SOCIAL,
-    DIY,
-    CHARITY,
-    COOKING,
-    RELAXATION,
-    MUSIC,
-    BUSYWORK
+enum class Category( title: String) {
+    EDUCATION("Education"),
+    RECREATIONAL("Recreational"),
+    SOCIAL("Social"),
+    DIY("DIY"),
+    CHARITY("Charity"),
+    COOKING("Cooking"),
+    RELAXATION("Relaxation"),
+    MUSIC("Music"),
+    BUSYWORK("Busywork")
 }
