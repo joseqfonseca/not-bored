@@ -33,6 +33,9 @@
     <string name="x">X</string>
     <string name="close_terms">x</string>
     <string name="large_text">test </string>
-    <string name="text_label_switch_no">NO</string>
-    <string name="text_label_switch_yes">YES</string>
+    <string name="text_label_switch_no">"\n \n \nNO"</string>
+    <string name="text_label_switch_yes">"\n \n \nYES"</string>
+    <string name="btn_start_home">Start</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -7,9 +7,11 @@
         <entry key="app/src/main/res/drawable/welcome.xml" value="0.216" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.33425925925925926" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/layout/activity_nav.xml" value="0.396875" />
         <entry key="app/src/main/res/layout/activity_scrolling.xml" value="0.22708333333333333" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.36574074074074076" />
         <entry key="app/src/main/res/layout/activity_term.xml" value="0.396875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.396875" />
       </map>
     </option>
   </component>
