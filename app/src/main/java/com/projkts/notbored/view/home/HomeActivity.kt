@@ -1,12 +1,12 @@
-package com.projkts.notbored
+package com.projkts.notbored.view.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.projkts.notbored.R
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.activity_home)
     }
 }
