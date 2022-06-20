@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.21318607764390896" />
         <entry key="app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.2032103825136612" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15715579710144928" />
         <entry key="app/src/main/res/layout/activity_scrolling.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2694746376811594" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.2753623188405797" />

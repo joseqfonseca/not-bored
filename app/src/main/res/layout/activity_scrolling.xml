@@ -38,13 +38,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="362dp"
         android:layout_height="651dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/close_terms"
-        android:text="@string/terms_text" />
+        android:text="@string/terms_text"
+        tools:text="@string/terms_text" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
