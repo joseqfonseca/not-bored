@@ -1,14 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.home.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgTopLogoHome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/top_logo"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textTitlePrincipalHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/principal_title"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTopLogoHome" />
+
+    <TextView
+        android:id="@+id/textLabelNumberPartHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/label_handle_participants"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitlePrincipalHome" />
+
+    <SeekBar
+        android:id="@+id/seekBarNumberPartHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="14dp"
+        android:max="10"
+        android:progressBackgroundTint="@color/purple_200"
+        android:progressTint="@color/purple_200"
+        android:thumbTint="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLabelNumberPartHome"
+        tools:progress="10" />
+
+    <TextView
+        android:id="@+id/textLabelPriceHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/label_handle_price"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarNumberPartHome" />
+
+    <Switch
+        android:id="@+id/switchPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingBottom="20dp"
+        android:backgroundTint="@color/purple_200"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:shadowColor="@color/purple_200"
+        android:showText="true"
+        android:textAlignment="textEnd"
+        android:textColorHighlight="@color/purple_200"
+        android:textColorLink="@color/gray"
+        android:textOff="@string/text_label_switch_no"
+        android:textOn="@string/text_label_switch_yes"
+        android:thumbTint="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLabelPriceHome"
+        tools:checked="true" />
+
+    <SeekBar
+        android:id="@+id/seekBarPriceHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="14dp"
+        android:max="10"
+        android:progressBackgroundTint="@color/purple_200"
+        android:progressTint="@color/purple_200"
+        android:thumbTint="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchPrice"
+        tools:progress="10" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarPriceHome" />
+
+    <CheckBox
+        android:id="@+id/checkTermsHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@id/textTermsHome"
+        app:layout_constraintTop_toBottomOf="@id/btnStart" />
+
+    <TextView
+        android:id="@+id/textTermsHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/inter_medium"
+        android:padding="14dp"
+        android:paddingStart="0dp"
+        android:text="Terms and Conditions"
+        app:layout_constraintStart_toEndOf="@id/checkTermsHome"
+        app:layout_constraintTop_toBottomOf="@id/btnStart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
