@@ -37,7 +37,7 @@
     <string name="title_activity">Activity Categories</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="large_text">test </string>
+    <string name="btn_principal_activity">Random</string>
     <!-- Screen Suggestion -->
     <string name="title_suggestion">ENJOY IT!</string>
     <string name="phrase_random_suggestion">Your random category is:</string>
