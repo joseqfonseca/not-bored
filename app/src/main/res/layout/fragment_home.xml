@@ -112,26 +112,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seekBarPriceHome" />
 
+    <TextView
+        android:id="@+id/textLinkTermsHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/inter_medium"
+        android:paddingStart="0dp"
+        android:text="Terms and Conditions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnStart" />
+
     <CheckBox
         android:id="@+id/checkTermsHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@id/textTermsHome"
-        app:layout_constraintTop_toBottomOf="@id/btnStart" />
-
-    <TextView
-        android:id="@+id/textTermsHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="84dp"
-        android:fontFamily="@font/inter_medium"
-        android:padding="14dp"
-        android:paddingStart="0dp"
-        android:text="Terms and Conditions"
-        app:layout_constraintStart_toEndOf="@id/checkTermsHome"
-        app:layout_constraintTop_toBottomOf="@id/btnStart" />
+        android:duplicateParentState="false"
+        android:text="I have read and agree to the terms"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLinkTermsHome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
