@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">NotBored</string>
+    <!-- Screen Home -->
     <string name="principal_title">NOT BORED</string>
     <string name="welcome">Welcome</string>
     <string name="label_handle_participants">Select the number of participants</string>
     <string name="label_handle_price">Do you want to filter the price?</string>
     <string name="btn_start">Start</string>
-    <string name="link_terms">Terms and conditions</string>
+    <string name="link_terms"><u>Terms and conditions</u></string>
+    <string name="text_label_switch_no">"\n \n \nNO"</string>
+    <string name="text_label_switch_yes">"\n \n \nYES"</string>
+    <string name="label_checkbox">I have read and agree to the terms</string>
+    <!-- Screen Terms and Conditions -->
     <string name="title_terms">Terms and Conditions</string>
+    <string name="close_terms">X</string>
     <string name="terms_text">
         "Lorem ipsum dolor sit amet, \n"
         "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -27,15 +33,23 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt \n ut labore et dolore magna aliqua.\n\n"
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\n"</string>
+    <!-- Screen Activity -->
     <string name="title_activity">Activity Categories</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="x">X</string>
-    <string name="close_terms">x</string>
-    <string name="large_text">test </string>
-    <string name="text_label_switch_no">"\n \n \nNO"</string>
-    <string name="text_label_switch_yes">"\n \n \nYES"</string>
-    <string name="btn_start_home">Start</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_principal_activity">Random</string>
+    <!-- Screen Suggestion -->
+    <string name="description_img">A happy polar bear</string>
+    <string name="description_icon">A yellow star icon</string>
+    <string name="title_suggestion">ENJOY IT!</string>
+    <string name="phrase_random_suggestion">Your random category is:</string>
+    <string name="phrase_category_suggestion">Your category is:</string>
+    <string name="chosen_suggestion">Learn how to play a new sport</string>
+    <string name="label_participants">Participants:</string>
+    <string name="label_price">Price:</string>
+    <string name="participants_total">2</string>
+    <string name="type_price">Medium</string>
+    <string name="type_activity">Recreational</string>
+    <string name="btn_primary_suggestion">Try another</string>
+
 </resources>
