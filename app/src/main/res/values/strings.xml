@@ -38,4 +38,7 @@
     <string name="btn_start_home">Start</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shared_preferences_acept_terms">ACEPT_TERMS</string>
+    <string name="title_category">Activity Categories</string>
+    <string name="text_btn_random_category">Random</string>
 </resources>

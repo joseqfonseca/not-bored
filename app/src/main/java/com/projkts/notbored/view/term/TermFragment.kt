@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentTermBinding
 
@@ -29,7 +30,7 @@ class TermFragment : Fragment(R.layout.fragment_term) {
 
     private fun setBtnCloseTermsListener() {
         binding.btnCloseTerm.setOnClickListener {
-            //close the fragment
+            findNavController().popBackStack()
         }
     }
 

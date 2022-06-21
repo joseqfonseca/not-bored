@@ -1,7 +1,9 @@
 package com.projkts.notbored.model
 
-enum class Category( title: String) {
-    EDUCATION("Education"),
+import com.projkts.notbored.R
+
+enum class Category(val title: String, val imageResource: Int = 0) {
+    EDUCATION("Education", R.drawable.img_category_education),
     RECREATIONAL("Recreational"),
     SOCIAL("Social"),
     DIY("DIY"),

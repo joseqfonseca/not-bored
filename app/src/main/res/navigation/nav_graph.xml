@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_termFragment"
             app:destination="@id/termFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
     </fragment>
 
     <fragment
@@ -20,5 +23,10 @@
         android:name="com.projkts.notbored.view.term.TermFragment"
         android:label="fragment_term"
         tools:layout="@layout/fragment_term" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.projkts.notbored.view.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
 
 </navigation>
