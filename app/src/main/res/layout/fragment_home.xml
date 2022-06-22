@@ -46,13 +46,26 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="14dp"
         android:max="10"
+        android:progress="1"
         android:progressBackgroundTint="@color/purple_200"
         android:progressTint="@color/purple_200"
         android:thumbTint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textLabelNumberPartHome"
-        tools:progress="10" />
+        app:layout_constraintTop_toBottomOf="@id/textLabelNumberPartHome" />
+
+    <TextView
+        android:id="@+id/textSeekNumberPartic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/seekBarNumberPartHome"
+        app:layout_constraintStart_toStartOf="@id/seekBarNumberPartHome"
+        app:layout_constraintTop_toBottomOf="@id/seekBarNumberPartHome" />
+
 
     <TextView
         android:id="@+id/textLabelPriceHome"
@@ -70,7 +83,7 @@
         android:id="@+id/switchPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="10dp"
         android:paddingBottom="20dp"
         android:backgroundTint="@color/purple_200"
         android:minWidth="48dp"
@@ -85,22 +98,32 @@
         android:thumbTint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textLabelPriceHome"
-        tools:checked="true" />
+        app:layout_constraintTop_toBottomOf="@id/textLabelPriceHome" />
 
     <SeekBar
         android:id="@+id/seekBarPriceHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="8dp"
         android:max="10"
         android:progressBackgroundTint="@color/purple_200"
         android:progressTint="@color/purple_200"
         android:thumbTint="@color/purple_200"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switchPrice"
-        tools:progress="10" />
+        app:layout_constraintTop_toBottomOf="@id/switchPrice" />
+
+    <TextView
+        android:id="@+id/textSeekPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/seekBarPriceHome"
+        app:layout_constraintStart_toStartOf="@id/seekBarPriceHome"
+        app:layout_constraintTop_toBottomOf="@id/seekBarPriceHome" />
 
     <Button
         android:id="@+id/btnStart"
@@ -119,9 +142,9 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/inter_medium"
         android:paddingStart="0dp"
-        android:text="Terms and Conditions"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/link_terms"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnStart" />
 
     <CheckBox

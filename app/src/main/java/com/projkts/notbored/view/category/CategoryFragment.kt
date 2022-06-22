@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentCategoryBinding
 import com.projkts.notbored.model.Category
+import com.projkts.notbored.repository.CategoryRepository
 
 class CategoryFragment : Fragment(R.layout.fragment_category) {
 
@@ -28,30 +29,22 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
 
         recyclerViewConfig()
 
+        val numberParticipants = arguments?.getString("numberParticipants")?.toInt()
+        val price = arguments?.getString("price")?.toDouble()
+
+        println(numberParticipants)
+        println(price)
+
         return binding.root
     }
 
     private fun recyclerViewConfig() {
         binding.recyclerViewCategory.adapter =
             CategoryRecyclerAdapter(
-                getCategoryList(),
+                CategoryRepository.getAll(),
                 { cardListener(it) }
             )
         binding.recyclerViewCategory.layoutManager = GridLayoutManager(getContext(), 2)
-    }
-
-    private fun getCategoryList(): List<Category> {
-        return listOf(
-            Category.CHARITY,
-            Category.COOKING,
-            Category.DIY,
-            Category.BUSYWORK,
-            Category.EDUCATION,
-            Category.MUSIC,
-            Category.RECREATIONAL,
-            Category.SOCIAL,
-            Category.RELAXATION
-        )
     }
 
     private fun cardListener(category: Category) {

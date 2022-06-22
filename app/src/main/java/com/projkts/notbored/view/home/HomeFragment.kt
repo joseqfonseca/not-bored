@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentHomeBinding
@@ -22,12 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
         //aplly config to screen componnents
         setConfig()
 
@@ -36,11 +33,43 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         //verifing if terms were acepted previously and configurating check and button start
         verifyAceptedCheckTerms()
+    }
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return binding.root
     }
 
     private fun setConfig() {
+        binding.seekBarPriceHome.isEnabled = false
+
+        binding.seekBarNumberPartHome.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar?, currentValue: Int, p2: Boolean) {
+                if (currentValue > 0) binding.textSeekNumberPartic.text =
+                    currentValue.toString() else seek?.progress = 1
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {}
+            override fun onStopTrackingTouch(p0: SeekBar?) {}
+        })
+
+        binding.switchPrice.setOnCheckedChangeListener { compoundButton, b ->
+            binding.seekBarPriceHome.isEnabled = b
+        }
+
+        binding.seekBarPriceHome.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar?, currentValue: Int, p2: Boolean) {
+                binding.textSeekPrice.text = if(currentValue > 0) (currentValue.toDouble() / 10).toString() else "0"
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {}
+            override fun onStopTrackingTouch(p0: SeekBar?) {}
+        })
+
         binding.textLinkTermsHome.setOnClickListener() {
             findNavController().navigate(R.id.action_homeFragment_to_termFragment)
         }
@@ -51,11 +80,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         binding.btnStart.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_categoryFragment)
+
+            val bundle = bundleOf(
+                "numberParticipants" to binding.textSeekNumberPartic.text,
+                "price" to if (binding.switchPrice.isChecked) binding.textSeekPrice.text else null
+            )
+            findNavController().navigate(R.id.action_homeFragment_to_categoryFragment, bundle)
         }
     }
 
-    private fun verifyAceptedCheckTerms(){
+    private fun verifyAceptedCheckTerms() {
         binding.btnStart.isEnabled = sharedPreferences.getBoolean("ACEPTED_TERMS", false)
         binding.checkTermsHome.isChecked = sharedPreferences.getBoolean("ACEPTED_TERMS", false)
     }
