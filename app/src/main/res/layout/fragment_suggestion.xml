@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.suggestion.SuggestionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="172dp"
+        android:contentDescription="@string/description_img"
+        android:src="@drawable/top_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textViewSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/title_suggestion"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/phraseCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
+
+    <TextView
+        android:id="@+id/phraseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:text="@string/phrase_random_suggestion"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/chosenSuggestion"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSuggestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
+
+    <TextView
+        android:id="@+id/typeActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/type_activity"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chosenSuggestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintStart_toStartOf="@+id/textViewSuggestion"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/chosenSuggestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phraseCategory" />
+
+    <TextView
+        android:id="@+id/labelParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:padding="2dp"
+        android:text="@string/label_participants"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/IconStar1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/btn_primary_suggestion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelParticipants"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/totalParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:padding="2dp"
+        android:text="@string/participants_total"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelParticipants"
+        app:layout_constraintEnd_toEndOf="@+id/typeActivity"
+        app:layout_constraintStart_toEndOf="@+id/phraseCategory"
+        app:layout_constraintTop_toTopOf="@+id/labelParticipants" />
+
+    <TextView
+        android:id="@+id/chosenSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/chosen_suggestion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/labelParticipants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion"
+        app:layout_constraintVertical_bias="0.822" />
+
+    <TextView
+        android:id="@+id/labelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="@string/label_price"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/iconStar2"
+        app:layout_constraintTop_toBottomOf="@+id/labelParticipants"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <TextView
+        android:id="@+id/typePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/type_price"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/typeActivity"
+        app:layout_constraintStart_toEndOf="@+id/phraseCategory"
+        app:layout_constraintTop_toBottomOf="@+id/totalParticipants" />
+
+    <ImageView
+        android:id="@+id/IconStar1"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:contentDescription="@string/description_icon"
+        android:src="@android:drawable/btn_star_big_on"
+        app:layout_constraintBottom_toBottomOf="@+id/labelParticipants"
+        app:layout_constraintStart_toStartOf="@+id/phraseCategory"
+        app:layout_constraintTop_toTopOf="@+id/labelParticipants"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/iconStar2"
+        android:layout_width="31dp"
+        android:layout_height="26dp"
+        android:contentDescription="@string/description_icon"
+        android:src="@android:drawable/btn_star_big_on"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPrice"
+        app:layout_constraintStart_toStartOf="@+id/IconStar1"
+        app:layout_constraintTop_toTopOf="@+id/labelPrice"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
