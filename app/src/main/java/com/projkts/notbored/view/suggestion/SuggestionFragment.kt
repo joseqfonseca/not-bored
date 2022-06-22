@@ -1,18 +1,18 @@
 package com.projkts.notbored.view.suggestion
 
-import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentSuggestionBinding
 import com.projkts.notbored.model.Activity
 import com.projkts.notbored.model.Category
 import com.projkts.notbored.repository.ActivityRepository
 
-class SuggestionFragment : Fragment() {
+class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
 
     private val binding: FragmentSuggestionBinding by lazy {
         FragmentSuggestionBinding.inflate(layoutInflater)
@@ -21,6 +21,8 @@ class SuggestionFragment : Fragment() {
     private var numberParticipants: Int = 0
     private var price: Double? = 0.0
     private var category: Category? = null
+
+    private var currentActivity: Activity? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class SuggestionFragment : Fragment() {
         price = arguments?.getDouble("price")
         category = arguments?.get("category") as Category?
 
-        suggestActivity()
+        suggestActivity(currentActivity)
     }
 
     override fun onCreateView(
@@ -40,46 +42,50 @@ class SuggestionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_suggestion, container, false)
+        return binding.root
     }
 
     private fun config() {
-        binding.button.setOnClickListener {
-            /*val dialogLoading = AlertDialog.Builder(requireContext()).apply {
-                setMessage("Loading...")
-            }*/
-            suggestActivity()
+        binding.buttonTryAnother.setOnClickListener {
+            suggestActivity(currentActivity)
         }
     }
 
     private fun getSortedActivity(
         numberParticipants: Int,
         price: Double?,
-        category: Category?
+        category: Category?,
+        currentActivity: Activity?
     ): Activity? {
         return ActivityRepository.getAll().filter {
-            it.participants == numberParticipants && (price == null || it.price == price) && (category == null || it.category.name == category.name)
+            it.participants == numberParticipants && (price == null || it.price == price) && (category == null || it.category.name == category.name) && it != currentActivity
         }.randomOrNull()
     }
 
-    private fun suggestActivity() {
+    private fun suggestActivity(current: Activity?) {
         //sorting activity suggestion with the filters
-        val activity = getSortedActivity(numberParticipants, price, category)
+        currentActivity = getSortedActivity(numberParticipants, price, category, current)
 
-        //fill the screen fields
-        if (activity != null) {
-            activity?.let {
-                binding.phraseCategory.text =
-                    if (category == null) getString(R.string.phrase_random_suggestion) else getString(
-                        R.string.phrase_category_suggestion
-                    )
-                binding.typeActivity.text = it.title
-                binding.totalParticipants.text = it.participants.toString()
-                binding.typePrice.text = it.getPriceName()
-            }
-        } else {
-            //findNavController().popBackStack()
-            //Toast.makeText(requireContext(), "No activity available in this search :/", 2500)
+        //fill the screen fields if activity existis
+        currentActivity?.let {
+            binding.phraseCategory.text =
+                if (category == null) getString(R.string.phrase_random_suggestion) else getString(R.string.phrase_category_suggestion)
+            binding.typeActivity.text = it.category?.title
+            binding.chosenSuggestion.text = it.title
+            binding.totalParticipants.text = it.participants.toString()
+            binding.typePrice.text = it.getPriceName()
+            return
         }
+
+        // only if no activity found
+
+        var msg = ""
+
+        if (currentActivity == null)
+            msg = getString(R.string.toast_msg_no_activity_available)
+        else
+            msg = getString(R.string.toast_msg_no_more_activity)
+
+        Toast.makeText(requireContext(), msg, 2500).show()
     }
 }

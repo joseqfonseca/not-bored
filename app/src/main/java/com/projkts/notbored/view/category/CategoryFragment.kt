@@ -19,7 +19,7 @@ import kotlin.properties.Delegates
 
 class CategoryFragment : Fragment(R.layout.fragment_category) {
 
-    val binding: FragmentCategoryBinding by lazy {
+    private val binding: FragmentCategoryBinding by lazy {
         FragmentCategoryBinding.inflate(layoutInflater)
     }
 

@@ -45,12 +45,13 @@
     <string name="title_suggestion">ENJOY IT!</string>
     <string name="phrase_random_suggestion">Your random category is:</string>
     <string name="phrase_category_suggestion">Your category is:</string>
-    <string name="chosen_suggestion">Learn how to play a new sport</string>
+    <string name="chosen_suggestion">--</string>
     <string name="label_participants">Participants:</string>
     <string name="label_price">Price:</string>
-    <string name="participants_total">2</string>
-    <string name="type_price">Medium</string>
-    <string name="type_activity">Recreational</string>
+    <string name="participants_total">--</string>
+    <string name="type_price">--</string>
+    <string name="type_activity">--</string>
     <string name="btn_primary_suggestion">Try another</string>
-
+    <string name="toast_msg_no_activity_available">No activity available in this search :/</string>
+    <string name="toast_msg_no_more_activity">No more activity available in this search return to Categories :/</string>
 </resources>
