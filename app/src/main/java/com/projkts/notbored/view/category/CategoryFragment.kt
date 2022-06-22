@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentCategoryBinding
@@ -30,12 +31,16 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
         return binding.root
     }
 
-    fun recyclerViewConfig() {
-        binding.recyclerViewCategory.adapter = CategoryRecyclerAdapter(getCategoryList())
+    private fun recyclerViewConfig() {
+        binding.recyclerViewCategory.adapter =
+            CategoryRecyclerAdapter(
+                getCategoryList(),
+                { cardListener(it) }
+            )
         binding.recyclerViewCategory.layoutManager = GridLayoutManager(getContext(), 2)
     }
 
-    fun getCategoryList(): List<Category> {
+    private fun getCategoryList(): List<Category> {
         return listOf(
             Category.CHARITY,
             Category.COOKING,
@@ -47,6 +52,10 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
             Category.SOCIAL,
             Category.RELAXATION
         )
+    }
+
+    private fun cardListener(category: Category) {
+        Toast.makeText(context, category.title, 2000).show()
     }
 
 }

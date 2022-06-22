@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.projkts.notbored.databinding.CardCategoryBinding
 import com.projkts.notbored.model.Category
 
-class CategoryRecyclerAdapter(private val list: List<Category>) :
+class CategoryRecyclerAdapter(
+    private val list: List<Category>,
+    private val cardListener: (category: Category) -> Unit
+) :
     RecyclerView.Adapter<CategoryRecyclerAdapter.CategoryRecyclerHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryRecyclerHolder {
@@ -28,6 +31,10 @@ class CategoryRecyclerAdapter(private val list: List<Category>) :
         fun bind(category: Category) {
             card.imageCategory.setImageResource(category.imageResource)
             card.textCategory.text = category.title
+
+            card.root.setOnClickListener {
+                cardListener(category)
+            }
         }
     }
 }
