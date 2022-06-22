@@ -27,6 +27,15 @@
         android:id="@+id/categoryFragment"
         android:name="com.projkts.notbored.view.category.CategoryFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_suggestionFragment"
+            app:destination="@id/suggestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/suggestionFragment"
+        android:name="com.projkts.notbored.view.suggestion.SuggestionFragment"
+        android:label="fragment_suggestion"
+        tools:layout="@layout/fragment_suggestion" />
 
 </navigation>
