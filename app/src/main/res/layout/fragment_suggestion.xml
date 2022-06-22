@@ -10,14 +10,16 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="391dp"
-        android:layout_height="169dp"
+        android:layout_width="411dp"
+        android:layout_height="172dp"
         android:contentDescription="@string/description_img"
         android:src="@drawable/top_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -166,7 +168,8 @@
         android:src="@android:drawable/btn_star_big_on"
         app:layout_constraintBottom_toBottomOf="@+id/labelParticipants"
         app:layout_constraintStart_toStartOf="@+id/phraseCategory"
-        app:layout_constraintTop_toTopOf="@+id/labelParticipants" />
+        app:layout_constraintTop_toTopOf="@+id/labelParticipants"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/iconStar2"
@@ -176,6 +179,7 @@
         android:src="@android:drawable/btn_star_big_on"
         app:layout_constraintBottom_toBottomOf="@+id/labelPrice"
         app:layout_constraintStart_toStartOf="@+id/IconStar1"
-        app:layout_constraintTop_toTopOf="@+id/labelPrice" />
+        app:layout_constraintTop_toTopOf="@+id/labelPrice"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
