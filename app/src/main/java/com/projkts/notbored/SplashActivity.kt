@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
 
     private fun showSlash() {
         thread(true) {
-            Thread.sleep(500L)
+            Thread.sleep(2500L)
             startActivity(Intent("", null, this, NavActivity::class.java))
             finish()
         }

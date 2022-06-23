@@ -64,16 +64,18 @@ class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
 
     private fun suggestActivity(current: Activity?) {
         //sorting activity suggestion with the filters
-        currentActivity = getSortedActivity(numberParticipants, price, category, current)
+        val newActivity = getSortedActivity(numberParticipants, price, category, current)
 
         //fill the screen fields if activity existis
-        currentActivity?.let {
+        newActivity?.let {
             binding.phraseCategory.text =
                 if (category == null) getString(R.string.phrase_random_suggestion) else getString(R.string.phrase_category_suggestion)
             binding.typeActivity.text = it.category?.title
             binding.chosenSuggestion.text = it.title
             binding.totalParticipants.text = it.participants.toString()
             binding.typePrice.text = it.getPriceName()
+
+            currentActivity = it
             return
         }
 
@@ -86,6 +88,6 @@ class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
         else
             msg = getString(R.string.toast_msg_no_more_activity)
 
-        Toast.makeText(requireContext(), msg, 2500).show()
+        Toast.makeText(requireContext(), msg, 3000).show()
     }
 }
