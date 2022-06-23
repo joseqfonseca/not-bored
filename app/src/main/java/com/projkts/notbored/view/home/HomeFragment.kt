@@ -80,7 +80,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         binding.btnStart.setOnClickListener {
-
             val bundle = bundleOf(
                 "numberParticipants" to binding.textSeekNumberPartic.text,
                 "price" to if (binding.switchPrice.isChecked) binding.textSeekPrice.text else null

@@ -44,10 +44,6 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
-
     private fun config() {
         binding.btnRandom.setOnClickListener {
             openSuggestion(numberParticipants, price, null)
