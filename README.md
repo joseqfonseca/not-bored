@@ -7,7 +7,6 @@ Mostra recomendações  de atividades a serem feitas de acordo com a categoria d
 ### Protótipo 
 Desenvolvido com base no projeto respeitando as exigências da atividadde e pensado para uma melhor experiência do usuário.
 
-
 #### Telas principais
 
 <img src="https://github.com/KaFukuda/images/blob/main/Captura%20de%20Tela%202022-06-23%20a%CC%80s%2014.32.16.png"/>
@@ -26,8 +25,7 @@ Desenvolvido com base no projeto respeitando as exigências da atividadde e pens
 - Na tela final, mostra a categoria e sua atividade disponível fitrada
 - Caso não  haja categoria para aquela seleção de filtros, mostra mensagem de erro
 
-
---- 
+---
 
 ### Tecnologias
 
@@ -48,9 +46,8 @@ Desenvolvido com base no projeto respeitando as exigências da atividadde e pens
 - Clean Code
 - UX / UI
 
+---
+
 ### Devs
 
 [José Fonseca](https://github.com/joseqfonseca) && [Karina Fukuda](https://github.com/KaFukuda)
-
-
-
