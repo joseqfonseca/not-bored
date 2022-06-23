@@ -93,7 +93,7 @@ object ActivityRepository {
             Activity("Make a cutlery holder", 10 , 1.0, Category.DIY),
             Activity("Make a green letter", 10 , 0.0, Category.DIY),
             Activity("Make a sandwich", 1 , 0.0, Category.COOKING),
-            Activity("Make a x-ratão sandwich", 1 , 0.9, Category.COOKING),
+            Activity("Make a x-big-rat sandwich", 1 , 0.9, Category.COOKING),
             Activity("Make a cake", 2 , 0.1, Category.COOKING),
             Activity("Make a juice", 2 , 0.5, Category.COOKING),
             Activity("Make a japanese food", 3 , 0.2, Category.COOKING),
