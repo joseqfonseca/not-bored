@@ -94,18 +94,7 @@
         app:layout_constraintStart_toEndOf="@+id/IconStar1"
         app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
 
-    <Button
-        android:id="@+id/buttonTryAnother"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/btn_primary_suggestion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelParticipants"
-        tools:ignore="TextContrastCheck" />
+
 
     <TextView
         android:id="@+id/totalParticipants"
@@ -130,8 +119,8 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
         app:layout_constraintBottom_toTopOf="@+id/labelParticipants"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,5 +173,34 @@
         app:layout_constraintStart_toStartOf="@+id/IconStar1"
         app:layout_constraintTop_toTopOf="@+id/labelPrice"
         tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonTryAnother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/btn_primary_suggestion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelParticipants"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTryAnother"
+        tools:visibility="invisible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

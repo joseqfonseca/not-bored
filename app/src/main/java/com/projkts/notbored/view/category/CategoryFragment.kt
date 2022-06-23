@@ -24,7 +24,7 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
     }
 
     private var numberParticipants: Int = 0
-    private var price: Double? = 0.0
+    private var price: Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +70,7 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
     ) {
         val bundle = bundleOf(
             "numberParticipants" to numberParticipants,
-            "price" to price,
+            "price" to price?.toString(),
             "category" to category
         )
         findNavController().navigate(R.id.action_categoryFragment_to_suggestionFragment, bundle)

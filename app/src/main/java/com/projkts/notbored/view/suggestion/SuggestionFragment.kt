@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.projkts.notbored.R
 import com.projkts.notbored.databinding.FragmentSuggestionBinding
 import com.projkts.notbored.model.Activity
@@ -19,7 +20,7 @@ class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
     }
 
     private var numberParticipants: Int = 0
-    private var price: Double? = 0.0
+    private var price: Double? = null
     private var category: Category? = null
 
     private var currentActivity: Activity? = null
@@ -31,7 +32,7 @@ class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
 
         //reading the parameters from parent
         numberParticipants = arguments?.getInt("numberParticipants")!!
-        price = arguments?.getDouble("price")
+        price = arguments?.getString("price")?.toDoubleOrNull()
         category = arguments?.get("category") as Category?
 
         suggestActivity(currentActivity)
@@ -81,13 +82,9 @@ class SuggestionFragment : Fragment(R.layout.fragment_suggestion) {
 
         // only if no activity found
 
-        var msg = ""
-
-        if (currentActivity == null)
-            msg = getString(R.string.toast_msg_no_activity_available)
-        else
-            msg = getString(R.string.toast_msg_no_more_activity)
-
-        Toast.makeText(requireContext(), msg, 3000).show()
+        binding.textMsg.run {
+            text = if (currentActivity == null) getString(R.string.toast_msg_no_activity_available) else getString(R.string.toast_msg_no_more_activity)
+            isVisible = true
+        }
     }
 }

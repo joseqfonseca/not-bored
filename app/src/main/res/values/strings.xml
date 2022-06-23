@@ -53,5 +53,5 @@
     <string name="type_activity">--</string>
     <string name="btn_primary_suggestion">Try another</string>
     <string name="toast_msg_no_activity_available">No activity available in this search :/</string>
-    <string name="toast_msg_no_more_activity">No more activity available in this search return to Categories :/</string>
+    <string name="toast_msg_no_more_activity">No more activity available in this search :/</string>
 </resources>

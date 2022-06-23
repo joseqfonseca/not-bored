@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/img_category_education.xml" value="0.3965" />
+        <entry key="app/src/main/res/drawable/img_category_relaxation.xml" value="0.3965" />
         <entry key="app/src/main/res/drawable/splashscreen_notbored.xml" value="0.216" />
         <entry key="app/src/main/res/drawable/welcome.xml" value="0.216" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.33425925925925926" />
