@@ -4,12 +4,12 @@ import com.projkts.notbored.R
 
 enum class Category(val title: String, val imageResource: Int = 0) {
     EDUCATION("Education", R.drawable.img_category_education),
-    RECREATIONAL("Recreational"),
-    SOCIAL("Social"),
-    DIY("DIY"),
-    CHARITY("Charity"),
-    COOKING("Cooking"),
-    RELAXATION("Relaxation"),
-    MUSIC("Music"),
-    BUSYWORK("Busywork")
+    RECREATIONAL("Recreational", R.drawable.img_category_recreational),
+    SOCIAL("Social", R.drawable.img_category_social),
+    DIY("DIY", R.drawable.img_category_diy),
+    CHARITY("Charity", R.drawable.img_category_charity),
+    COOKING("Cooking", R.drawable.img_category_cooking),
+    RELAXATION("Relaxation", R.drawable.img_category_relaxation),
+    MUSIC("Music", R.drawable.img_category_music),
+    BUSYWORK("Busywork", R.drawable.img_category_busywork)
 }
